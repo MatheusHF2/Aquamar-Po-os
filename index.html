@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Aquamar Poços | Perfuração de Poços Semi-Artesianos no Vale do Paraíba</title>
+  <meta name="description" content="Serviços especializados em perfuração, manutenção e limpeza de poços semi-artesianos. Atendemos o Vale do Paraíba, Litoral Norte e regiões próximas.">
+  <meta name="keywords" content="poço semi-artesiano, perfuração de poços, limpeza de poços, manutenção de poços, Aquamar Poços, poço semi-artesiano, poços semi-artesianos Caraguatatuba, vale do paraíba, litoral norte">
+  <meta name="author" content="Aquamar Poços">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#004d99">
+
+  <!-- Open Graph (Facebook e redes sociais) -->
+  <meta property="og:title" content="Aquamar Poços | Perfuração de Poços Semi-Artesianos">
+  <meta property="og:description" content="Garantimos água limpa e abundante com serviços especializados no Vale do Paraíba e Litoral Norte.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Aquamar+Po%C3%A7os">
+  <meta property="og:url" content="https://seuusuario.github.io/aquamar-pocos">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="imagens/download.png" type="image/png">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <style>
+      /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004d99;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu-nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    .menu-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    .menu-nav a:hover {
+      color: #cce6ff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #004d99;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .menu-nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .corpo {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .menu {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      padding: 40px 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+
+    .menu h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .menu h4 {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .menu button {
+      width: 220px;
+      height: 50px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .menu button:first-of-type {
+      background-color: #0077cc;
+      color: #fff;
+    }
+
+    .menu button:first-of-type:hover {
+      background-color: #005fa3;
+    }
+
+    .menu button:last-of-type {
+      background-color: #fff;
+      color: #0077cc;
+      border: 2px solid #0077cc;
+    }
+
+    .menu button:last-of-type:hover {
+      background-color: #e6f0fa;
+    }
+
+    .servicos, .beneficios {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .servicos h2, .beneficios h2 {
+      font-size: 32px;
+      color: #002b5b;
+      margin-bottom: 10px;
+    }
+
+    .descricao {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px 0;
+    }
+
+    .card {
+      background-color: #fdfdfd;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .icone {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #0077cc;
+    }
+
+    .card h3 {
+      color: #003366;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .sobre-nos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+   .sobre-nos img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sobre-nos img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+    .sobre-nos .texto {
+      max-width: 600px;
+      color: #444;
+    }
+
+    .sobre-nos .texto h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .sobre-nos .texto p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .atendimento {
+  padding: 60px 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.conteudo-atendimento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.atendimento .texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.atendimento .texto h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.atendimento .texto p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.atendimento .imagem {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.atendimento .imagem img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.atendimento .imagem img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+    .contato {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contato h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .contato-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .contato-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+    }
+
+    .contato-item a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .contato-item a:hover {
+      color: #007BFF;
+    }
+
+    .rodape {
+      background-color: #090324;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+
+    .rodape a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .rodape a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container-header">
+    <div class="logo">Aquamar Poços</div>
+    <div class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">&#9776;</div>
+    <nav class="menu-nav" id="menuNav">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#contato">Contato</a>
+      <a href="#atendimento">Atendimento</a>
+    </nav>
+  </div>
+</header>
+
+<main class="corpo">
+  <section class="menu" id="inicio">
+    <h1>Soluções em Poços Semi-Artesianos com Qualidade e Segurança</h1>
+    <h4>Garantimos água limpa e abundante com nossos serviços especializados em perfuração e manutenção de poços semi-artesianos.</h4>
+    <a href="#contato"><button>Solicitar Orçamento</button></a>
+    <a href="#servicos"><button>Conheça Nossos Serviços</button></a>
+  </section>
+
+  <section class="servicos" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <p class="descricao">Oferecemos soluções completas em poços artesianos.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icone">💧</div>
+        <h3>Perfuração de Poços</h3>
+        <p>Perfurações seguras e eficientes com qualidade e respeito ao meio ambiente.</p>
+      </div>
+      <div class="card">
+        <div class="icone">🛠️</div>
+        <h3>Manutenção e Limpeza</h3>
+        <p>Limpeza, desinfecção e correções para garantir bom funcionamento e água limpa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre-nos" id="sobre">
+    <img src="imagens/IMG-20250510-WA0000.jpg" alt="Equipe da empresa Aquamar Poços" data-aos="fade-left">
+    <div class="texto" data-aos="fade-right">
+      <h2>Sobre Nós</h2>
+      <p>Com mais de 15 anos de experiência, somos especialistas em perfuração e manutenção de poços artesianos. Nossa equipe técnica altamente qualificada trabalha com equipamentos de última geração para garantir serviços de excelência. Comprometidos com a qualidade e a responsabilidade ambiental, todos os nossos procedimentos seguem rigorosamente as normas técnicas e ambientais.</p>
+    </div>
+  </section>
+
+  <section class="beneficios" id="beneficios" data-aos="zoom-in">
+    <h2>Benefícios de um Poço Semi-Artesiano</h2>
+    <p class="descricao">Investir em um poço semi-artesiano oferece vantagens significativas para sua residência, empresa ou propriedade rural.</p>
+    <div class="cards">
+      <div class="card"><h3>Economia a Longo Prazo</h3><p>Reduza significativamente seus gastos com água, pagando apenas pela energia utilizada na bomba.</p></div>
+      <div class="card"><h3>Independência Hídrica</h3><p>Tenha acesso à água mesmo em períodos de racionamento ou problemas no abastecimento público.</p></div>
+      <div class="card"><h3>Valorização do Imóvel</h3><p>Propriedades com poço artesiano têm seu valor de mercado aumentado significativamente.</p></div>
+      <div class="card"><h3>Sustentabilidade Ambiental</h3><p>Contribua para a preservação dos recursos hídricos com uma fonte de água sustentável e renovável.</p></div>
+      <div class="card"><h3>Solução para Grandes Demandas</h3><p>Atendemos com eficiência altas demandas de água para indústrias, agricultura e condomínios.</p></div>
+    </div>
+  </section>
+
+  <section class="atendimento" id="atendimento" data-aos="fade-down-right">
+    <div class="conteudo-atendimento">
+      <div class="texto">
+        <h2>Locais de Atendimento</h2>
+        <p>Atendemos diversas cidades do Vale do Paraíba, Litoral Norte e regiões vizinhas. Levamos tecnologia e qualidade até você, com agilidade e compromisso com o cliente.</p>
+        <p>Entre os principais municípios atendidos estão: São José dos Campos, Taubaté, Jacareí, Ubatuba, Caraguatatuba, São Sebastião e muito mais.</p>
+      </div>
+      <div class="imagem">
+        <img src="imagens/SaoPaulo_Meso_ValedoParaibaPaulista.svg.png" alt="Mapa do Vale do Paraíba">
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato" data-aos="flip-left">
+    <h2>Entre em contato e solicite seu orçamento!</h2>
+    <div class="contato-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+      <a href="https://wa.me/5512997767861" target="_blank">(12) 99776-7861</a>
+    </div>
+    <div class="contato-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+      <a href="https://wa.me/5512987070592" target="_blank">(12) 98707-0592</a>
+    </div>
+    <div class="contato-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      <a href="https://www.facebook.com/profile.php?id=61575901869430" target="_blank">Aquamar Poços</a>
+    </div>
+    <div class="contato-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      <a href="mailto:contato@m3fernandes.com">contatom3fernandes@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>&copy; 2025 Aquamar Poços. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Menu mobile -->
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('menuNav');
+  toggle.onclick = () => menu.classList.toggle('show');
+</script>
+
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
