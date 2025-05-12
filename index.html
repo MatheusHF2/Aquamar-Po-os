@@ -24,6 +24,8 @@
 
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- Estilos -->
   <style>
@@ -169,18 +171,50 @@
       background-color: #e6f0fa;
     }
 
-    .servicos, .beneficios {
-      text-align: center;
+  /* Seções gerais */
+    section {
       padding: 60px 20px;
+      text-align: center;
       background-color: #fff;
     }
 
-    .servicos h2, .beneficios h2 {
-      font-size: 32px;
-      color: #002b5b;
-      margin-bottom: 10px;
+    section:nth-of-type(even) {
+      background-color: #f9f9f9;
     }
 
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0077aa;
+    }
+
+    /* SERVIÇOS */
+    .servicos-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 250px;
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: #00aaff;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
     .descricao {
       font-size: 18px;
       color: #555;
@@ -404,22 +438,26 @@
     <a href="#servicos"><button>Conheça Nossos Serviços</button></a>
   </section>
 
-  <section class="servicos" id="servicos">
-    <h2>Nossos Serviços</h2>
-    <p class="descricao">Oferecemos soluções completas em poços artesianos.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="icone">💧</div>
-        <h3>Perfuração de Poços</h3>
-        <p>Perfurações seguras e eficientes com qualidade e respeito ao meio ambiente.</p>
+   <section class="servicos" id="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="servicos-grid">
+        <div class="card">
+          <i class="fas fa-water"></i>
+          <h3>Perfuração</h3>
+          <p>Equipamentos modernos para perfuração rápida e segura.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-cogs"></i>
+          <h3>Instalação</h3>
+          <p>Montagem de sistemas completos e prontos para uso imediato.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-tools"></i>
+          <h3>Manutenção</h3>
+          <p>Manutenção preventiva e corretiva para máxima durabilidade.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="icone">🛠️</div>
-        <h3>Manutenção e Limpeza</h3>
-        <p>Limpeza, desinfecção e correções para garantir bom funcionamento e água limpa.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <section class="sobre-nos" id="sobre">
     <img src="imagens/IMG-20250510-WA0000.jpg" alt="Equipe da empresa Aquamar Poços" data-aos="fade-left">
